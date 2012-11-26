@@ -274,6 +274,14 @@ public class Indexer extends SpelNodeImpl {
 							collection.size(), index);
 				}
 			}
+			
+			if (collection instanceof List) {
+				Object o = ((List)collection).get(index);
+				return new TypedValue(o,
+						collectionEntryTypeDescriptor
+								.elementTypeDescriptor(o));
+			}
+			
 			int pos = 0;
 			for (Object o : collection) {
 				if (pos == index) {
