@@ -16,13 +16,14 @@
 
 package org.springframework.test.context;
 
-import static org.springframework.beans.BeanUtils.instantiateClass;
-import static org.springframework.core.annotation.AnnotationUtils.findAnnotationDeclaringClass;
+import static org.springframework.beans.BeanUtils.*;
+import static org.springframework.core.annotation.AnnotationUtils.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import org.apache.commons.logging.Log;
@@ -182,31 +183,26 @@ abstract class ContextLoaderUtils {
 		Assert.notNull(clazz, "Class must not be null");
 
 		final List<ContextConfigurationAttributes> attributesList = new ArrayList<ContextConfigurationAttributes>();
+		
+		Map<Class<?>, ContextConfiguration> extractedAnnotations = extractAnnotations(ContextConfiguration.class, clazz, true);
 
-		Class<ContextConfiguration> annotationType = ContextConfiguration.class;
-		Class<?> declaringClass = findAnnotationDeclaringClass(annotationType, clazz);
-		Assert.notNull(declaringClass, String.format(
-			"Could not find an 'annotation declaring class' for annotation type [%s] and class [%s]", annotationType,
-			clazz));
+		for (Map.Entry<Class<?>, ContextConfiguration> entry : extractedAnnotations.entrySet())  {
 
-		while (declaringClass != null) {
-			ContextConfiguration contextConfiguration = declaringClass.getAnnotation(annotationType);
+			Class<?> entryClass = entry.getKey();
+			ContextConfiguration contextConfiguration = entry.getValue();
 
 			if (logger.isTraceEnabled()) {
 				logger.trace(String.format("Retrieved @ContextConfiguration [%s] for declaring class [%s].",
-					contextConfiguration, declaringClass));
+					contextConfiguration, entryClass.getName()));
 			}
 
-			ContextConfigurationAttributes attributes = new ContextConfigurationAttributes(declaringClass,
+			ContextConfigurationAttributes attributes = new ContextConfigurationAttributes(entryClass,
 				contextConfiguration);
 			if (logger.isTraceEnabled()) {
 				logger.trace("Resolved context configuration attributes: " + attributes);
 			}
 
-			attributesList.add(0, attributes);
-
-			declaringClass = contextConfiguration.inheritLocations() ? findAnnotationDeclaringClass(annotationType,
-				declaringClass.getSuperclass()) : null;
+			attributesList.add(attributes);
 		}
 
 		return attributesList;
