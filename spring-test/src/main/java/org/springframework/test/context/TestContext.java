@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2011 the original author or authors.
+ * Copyright 2002-2013 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,7 +16,10 @@
 
 package org.springframework.test.context;
 
+import static org.springframework.core.annotation.AnnotationUtils.extractAnnotations;
+
 import java.lang.reflect.Method;
+import java.util.Map;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -84,9 +87,9 @@ public class TestContext extends AttributeAccessorSupport {
 		Assert.notNull(contextCache, "ContextCache must not be null");
 
 		MergedContextConfiguration mergedContextConfiguration;
-		ContextConfiguration contextConfiguration = testClass.getAnnotation(ContextConfiguration.class);
+		Map<Class<?>, ContextConfiguration> extractAnnotations = extractAnnotations(ContextConfiguration.class, testClass, true, true);
 
-		if (contextConfiguration == null) {
+		if (extractAnnotations.isEmpty()) {
 			if (logger.isInfoEnabled()) {
 				logger.info(String.format("@ContextConfiguration not found for class [%s]", testClass));
 			}
@@ -94,8 +97,9 @@ public class TestContext extends AttributeAccessorSupport {
 		}
 		else {
 			if (logger.isTraceEnabled()) {
-				logger.trace(String.format("Retrieved @ContextConfiguration [%s] for class [%s]", contextConfiguration,
-					testClass));
+				for (Class<?> k : extractAnnotations.keySet()) {
+					logger.trace(String.format("Retrieved @ContextConfiguration [%s] for class [%s]", extractAnnotations.get(k), k));
+				}
 			}
 			mergedContextConfiguration = ContextLoaderUtils.buildMergedContextConfiguration(testClass,
 				defaultContextLoaderClassName);
