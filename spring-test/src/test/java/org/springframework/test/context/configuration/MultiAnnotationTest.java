@@ -17,17 +17,17 @@
 package org.springframework.test.context.configuration;
 
 import static org.junit.Assert.assertEquals;
-
 import static org.junit.Assert.assertNotNull;
+
+import java.util.Map;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.Colour;
-import org.springframework.beans.Employee;
-import org.springframework.beans.Pet;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.util.subpackage.Person;
 
 /**
  * Integration tests which verify the behavior of a class whose configurations is
@@ -49,35 +49,34 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @SecondAnnotation
 public class MultiAnnotationTest  {
 
-	@Autowired
-	private Pet dog;
 
 	@Autowired
-	private String str;
-	
-	@Autowired
-	private Employee employee; 
+	private ApplicationContext applicationContext;
 
-	@Autowired
-	private Colour colour;
-	
 	@Test
 	public void verifyExtendedAnnotationAutowiredFields() {
 
-		assertNotNull("The string field should have been autowired.", this.str);
-		assertEquals("string", this.str);
+		assertNotNull("The applicationContext should have been autowired.", applicationContext);
+		
+		Map<String, Person> personBeans = applicationContext.getBeansOfType(Person.class);
 
-		assertNotNull("The dog field should have been autowired.", this.dog);
-		assertEquals("Fido", this.dog.getName());
+		assertNotNull("The applicationContext should have beans of type Person.", personBeans);
+		assertEquals("The applicationContext should have 2 beans of type Person.", 2, personBeans.size());
 
-		assertNotNull("The colour field should have been autowired.", this.colour);
-		assertEquals("BLUE", this.colour.getLabel());
+		Person person1 = personBeans.get("p1");
+		Person person2 = personBeans.get("p2");
+		Person person3 = personBeans.get("p3");
+		Person personM = personBeans.get("pM");
 
-		assertNotNull("The employee field should have been autowired.", this.employee);
-		assertEquals("Giovanni", this.employee.getName());
+		assertNotNull(person1);
+		assertNotNull(person2);
+		assertNotNull(person3);
+		assertNotNull(personM);
 
-		assertNotNull("The colour field should have been autowired in employee.", this.employee.getFavouriteColour());
-		assertEquals(this.colour.getLabel(), this.employee.getFavouriteColour().getLabel());
+		assertEquals("Person 1", person1.getName());
+		assertEquals("Person 2", person2.getName());
+		assertEquals("Person 3", person3.getName());
+		assertEquals("Person Multi", personM.getName());
 	}
 
 }

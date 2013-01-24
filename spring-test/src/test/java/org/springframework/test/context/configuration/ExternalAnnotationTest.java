@@ -19,13 +19,15 @@ package org.springframework.test.context.configuration;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
+import java.util.Map;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.Colour;
-import org.springframework.beans.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.util.subpackage.Person;
 
 /**
  * Integration tests which verify the behavior of a class whose configuration
@@ -43,22 +45,26 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 public class ExternalAnnotationTest {
 
 	@Autowired
-	private Employee employee;
-
-	@Autowired
-	private Colour colour;
+	private ApplicationContext applicationContext;
 
 	@Test
 	public void verifyExtendedAnnotationAutowiredFields() {
 
-		assertNotNull("The colour field should have been autowired.", this.colour);
-		assertEquals("BLUE", this.colour.getLabel());
+		assertNotNull("The applicationContext should have been autowired.", applicationContext);
+		
+		Map<String, Person> personBeans = applicationContext.getBeansOfType(Person.class);
 
-		assertNotNull("The employee field should have been autowired.", this.employee);
-		assertEquals("Giovanni", this.employee.getName());
+		assertNotNull("The applicationContext should have beans of type Person.", personBeans);
+		assertEquals("The applicationContext should have 2 beans of type Person.", 2, personBeans.size());
 
-		assertNotNull("The colour field should have been autowired in employee.", this.employee.getFavouriteColour());
-		assertEquals(this.colour.getLabel(), this.employee.getFavouriteColour().getLabel());
+		Person person2 = personBeans.get("p2");
+		Person person3 = personBeans.get("p3");
+		
+		assertNotNull(person2);
+		assertNotNull(person3);
+
+		assertEquals("Person 2", person2.getName());
+		assertEquals("Person 3", person3.getName());
 	}
 
 }
