@@ -8,6 +8,9 @@ buildscript {
 	}
 }
 
+
+apply plugin: 'sonar-runner'
+
 configure(allprojects) { project ->
 	group = "org.springframework"
 	version = qualifyVersionIfNecessary(version)
@@ -44,6 +47,21 @@ configure(allprojects) { project ->
 		"-Xlint:-deprecation", // TODO enable and fix warnings
 		"-Xlint:-unchecked"    // TODO enable and fix warnings
 	]
+
+	sonarRunner {
+		sonarProperties {
+			property "sonar.host.url", "http://192.168.xxx.xxx:9000/"
+			
+			property "sonar.login", "aaa"
+			property "sonar.password", "bbb"		
+			
+			property "sonar.jdbc.url", "jdbc:mysql://192.168.xxx.xxx:3306/sonar?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true"
+			property "sonar.jdbc.driverClassName", "com.mysql.jdbc.Driver"
+			property "sonar.jdbc.username", "ccc"
+			property "sonar.jdbc.password", "ddd"	
+		}
+	}
+
 
 	compileJava {
 		sourceCompatibility=1.6

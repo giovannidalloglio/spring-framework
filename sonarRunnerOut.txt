@@ -1,0 +1,682 @@
+
+D:\workspaces\git\spring-framework-3.2\spring-framework>gradlew clean sonarRunner --stacktrace
+
+:buildSrc:compileJava UP-TO-DATE
+:buildSrc:compileGroovy UP-TO-DATE
+:buildSrc:processResources UP-TO-DATE
+:buildSrc:classes UP-TO-DATE
+:buildSrc:jar UP-TO-DATE
+:buildSrc:assemble UP-TO-DATE
+:buildSrc:compileTestJava UP-TO-DATE
+:buildSrc:compileTestGroovy UP-TO-DATE
+:buildSrc:processTestResources UP-TO-DATE
+:buildSrc:testClasses UP-TO-DATE
+:buildSrc:test UP-TO-DATE
+:buildSrc:check UP-TO-DATE
+:buildSrc:build UP-TO-DATE
+:clean
+:spring-aop:clean
+:spring-aspects:clean
+:spring-beans:clean
+:spring-beans-groovy:clean
+:spring-build-src:clean
+:spring-context:clean
+:spring-context-support:clean
+:spring-core:clean
+:spring-expression:clean
+:spring-instrument:clean
+:spring-instrument-tomcat:clean
+:spring-jdbc:clean
+:spring-jms:clean
+:spring-messaging:clean
+:spring-orm:clean
+:spring-orm-hibernate4:clean
+:spring-oxm:clean
+:spring-test:clean
+:spring-tx:clean
+:spring-web:clean
+:spring-webmvc:clean
+:spring-webmvc-portlet:clean
+:spring-webmvc-tiles3:clean
+:spring-websocket:clean
+:compileJava UP-TO-DATE
+:compileGroovy UP-TO-DATE
+:processResources UP-TO-DATE
+:classes UP-TO-DATE
+:spring-core:cglibRepackJar
+:spring-core:compileJava
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+:spring-core:processResources UP-TO-DATE
+:spring-core:classes
+:spring-core:objenesisRepackJar
+:spring-core:jar
+:spring-beans:compileJava
+Note: D:\workspaces\git\spring-framework-3.2\spring-framework\spring-beans\src\main\java\org\springframework\beans\factory\xml\ResourceEntityResolver.
+java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+:spring-beans:processResources
+:spring-beans:classes
+:spring-beans-groovy:compileJava SKIPPED
+:spring-beans-groovy:compileGroovy
+warning: [options] bootstrap class path not set in conjunction with -source 1.6
+1 warning
+:spring-beans-groovy:processResources UP-TO-DATE
+:spring-beans-groovy:classes
+:spring-beans:jar
+:spring-aop:compileJava
+D:\workspaces\git\spring-framework-3.2\spring-framework\spring-aop\src\main\java\org\springframework\aop\framework\ObjenesisCglibAopProxy.java:35: war
+ning: [serial] serializable class ObjenesisCglibAopProxy has no definition of serialVersionUID
+class ObjenesisCglibAopProxy extends CglibAopProxy {
+^
+D:\workspaces\git\spring-framework-3.2\spring-framework\spring-aop\src\main\java\org\springframework\aop\target\AbstractPrototypeBasedTargetSource.jav
+a:46: warning: [serial] serializable class AbstractPrototypeBasedTargetSource has no definition of serialVersionUID
+public abstract class AbstractPrototypeBasedTargetSource extends AbstractBeanFactoryBasedTargetSource {
+                ^
+D:\workspaces\git\spring-framework-3.2\spring-framework\spring-aop\src\main\java\org\springframework\aop\target\AbstractPoolingTargetSource.java:53: w
+arning: [serial] serializable class AbstractPoolingTargetSource has no definition of serialVersionUID
+public abstract class AbstractPoolingTargetSource extends AbstractPrototypeBasedTargetSource
+                ^
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+3 warnings
+:spring-aop:processResources
+:spring-aop:classes
+:spring-aop:jar
+:spring-core:compileTestJava
+D:\workspaces\git\spring-framework-3.2\spring-framework\spring-core\src\test\java\org\springframework\core\ResolvableTypeTests.java:1233: warning: [se
+rial] serializable class ExtendsList has no definition of serialVersionUID
+        static class ExtendsList extends ArrayList<CharSequence> {
+               ^
+D:\workspaces\git\spring-framework-3.2\spring-framework\spring-core\src\test\java\org\springframework\core\ResolvableTypeTests.java:1238: warning: [se
+rial] serializable class ExtendsMap has no definition of serialVersionUID
+        static class ExtendsMap extends HashMap<String, Integer> {
+               ^
+D:\workspaces\git\spring-framework-3.2\spring-framework\spring-core\src\test\java\org\springframework\core\convert\TypeDescriptorTests.java:843: warni
+ng: [serial] serializable class PassDownGeneric has no definition of serialVersionUID
+        public static class PassDownGeneric<T> extends ArrayList<List<Set<T>>> {
+                      ^
+Note: D:\workspaces\git\spring-framework-3.2\spring-framework\spring-core\src\test\java\org\springframework\core\GenericTypeResolverTests.java uses or
+ overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+3 warnings
+:spring-core:processTestResources
+:spring-core:testClasses
+:spring-beans:compileTestJava
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+:spring-beans:processTestResources
+:spring-beans:testClasses
+:spring-aop:compileTestJava
+D:\workspaces\git\spring-framework-3.2\spring-framework\spring-aop\src\test\java\org\springframework\tests\aop\interceptor\NopInterceptor.java:28: war
+ning: [overrides] Class NopInterceptor overrides equals, but neither it nor any superclass overrides hashCode method
+public class NopInterceptor implements MethodInterceptor {
+       ^
+D:\workspaces\git\spring-framework-3.2\spring-framework\spring-aop\src\test\java\org\springframework\tests\sample\beans\SerializablePerson.java:29: wa
+rning: [overrides] Class SerializablePerson overrides equals, but neither it nor any superclass overrides hashCode method
+public class SerializablePerson implements Person, Serializable {
+       ^
+2 warnings
+:spring-aop:processTestResources
+:spring-aop:testClasses
+:spring-expression:compileJava
+:spring-expression:processResources UP-TO-DATE
+:spring-expression:classes
+:spring-expression:jar
+:spring-instrument:compileJava
+:spring-instrument:processResources UP-TO-DATE
+:spring-instrument:classes
+:spring-instrument:jar
+:spring-context:compileJava
+D:\workspaces\git\spring-framework-3.2\spring-framework\spring-context\src\main\java\org\springframework\scheduling\concurrent\DefaultManagedAwareThre
+adFactory.java:44: warning: [serial] serializable class DefaultManagedAwareThreadFactory has no definition of serialVersionUID
+public class DefaultManagedAwareThreadFactory extends CustomizableThreadFactory implements InitializingBean {
+       ^
+Note: D:\workspaces\git\spring-framework-3.2\spring-framework\spring-context\src\main\java\org\springframework\validation\beanvalidation\MethodValidationInterceptor.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+1 warning
+:spring-context:compileGroovy UP-TO-DATE
+:spring-context:processResources
+:spring-context:classes
+:spring-context:jar
+:spring-expression:compileTestJava
+D:\workspaces\git\spring-framework-3.2\spring-framework\spring-expression\src\test\java\org\springframework\expression\spel\spr10210\comp\B.java:23: w
+arning: [serial] serializable class B has no definition of serialVersionUID
+public class B<T extends C> implements Serializable {
+       ^
+D:\workspaces\git\spring-framework-3.2\spring-framework\spring-expression\src\test\java\org\springframework\expression\spel\spr10210\A.java:22: warnin
+g: [serial] serializable class A has no definition of serialVersionUID
+abstract class A extends B<C> {
+         ^
+D:\workspaces\git\spring-framework-3.2\spring-framework\spring-expression\src\test\java\org\springframework\expression\spel\spr10210\D.java:19: warnin
+g: [serial] serializable class D has no definition of serialVersionUID
+public class D extends A {
+       ^
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+3 warnings
+:spring-expression:processTestResources
+:spring-expression:testClasses
+:spring-instrument:compileTestJava UP-TO-DATE
+:spring-instrument:processTestResources
+:spring-instrument:testClasses
+:spring-context:compileTestJava
+D:\workspaces\git\spring-framework-3.2\spring-framework\spring-context\src\test\java\org\springframework\aop\framework\CglibProxyTests.java:185: warni
+ng: [overrides] Class <anonymous org.springframework.aop.framework.CglibProxyTests$1> overrides equals, but neither it nor any superclass overrides ha
+shCode method
+                Pointcut pointcut = new Pointcut() {
+                                                   ^
+D:\workspaces\git\spring-framework-3.2\spring-framework\spring-context\src\test\java\org\springframework\context\support\PropertySourcesPlaceholderCon
+figurerTests.java:188: warning: [serial] serializable class <anonymous org.springframework.context.support.PropertySourcesPlaceholderConfigurerTests$2
+> has no definition of serialVersionUID
+                pc.setProperties(new Properties() {{
+                                                  ^
+D:\workspaces\git\spring-framework-3.2\spring-framework\spring-context\src\test\java\org\springframework\context\support\PropertySourcesPlaceholderCon
+figurerTests.java:203: warning: [serial] serializable class <anonymous org.springframework.context.support.PropertySourcesPlaceholderConfigurerTests$3
+> has no definition of serialVersionUID
+                pc.setProperties(new Properties() {{
+                                                  ^
+Note: D:\workspaces\git\spring-framework-3.2\spring-framework\spring-context\src\test\java\org\springframework\scheduling\support\CronSequenceGeneratorTests.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+3 warnings
+:spring-context:compileTestGroovy
+:spring-context:processTestResources
+:spring-context:testClasses
+:spring-tx:compileJava
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+:spring-tx:processResources
+:spring-tx:classes
+:spring-tx:jar
+:spring-jdbc:compileJava
+D:\workspaces\git\spring-framework-3.2\spring-framework\spring-jdbc\src\main\java\org\springframework\jdbc\core\SqlRowSetResultSetExtractor.java:138:
+warning: CachedRowSetImpl is internal proprietary API and may be removed in a future release
+                        return new com.sun.rowset.CachedRowSetImpl();
+                                                 ^
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+1 warning
+:spring-jdbc:processResources
+:spring-jdbc:classes
+:spring-jdbc:jar
+:spring-context-support:compileJava
+Note: D:\workspaces\git\spring-framework-3.2\spring-framework\spring-context-support\src\main\java\org\springframework\cache\ehcache\EhCacheFactoryBean.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+:spring-context-support:processResources
+:spring-context-support:classes
+:spring-tx:compileTestJava
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+:spring-tx:processTestResources
+:spring-tx:testClasses
+:spring-jdbc:compileTestJava
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+:spring-jdbc:processTestResources
+:spring-jdbc:testClasses
+:spring-context-support:compileTestJava
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: D:\workspaces\git\spring-framework-3.2\spring-framework\spring-context-support\src\test\java\org\springframework\scheduling\quartz\QuartzSupportTests.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+:spring-context-support:processTestResources
+:spring-context-support:testClasses
+:spring-oxm:compileJava
+:spring-oxm:processResources
+:spring-oxm:classes
+:spring-oxm:jar
+:spring-web:compileJava
+D:\workspaces\git\spring-framework-3.2\spring-framework\spring-web\src\main\java\org\springframework\web\util\UriComponents.java:42: warning: [serial]
+ serializable class UriComponents has no definition of serialVersionUID
+public abstract class UriComponents implements Serializable {
+                ^
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+1 warning
+:spring-web:processResources
+:spring-web:classes
+:spring-web:jar
+:spring-orm:compileJava
+D:\workspaces\git\spring-framework-3.2\spring-framework\spring-orm\src\main\java\org\springframework\orm\jpa\AbstractEntityManagerFactoryBean.java:83:
+ warning: [serial] serializable class AbstractEntityManagerFactoryBean has no definition of serialVersionUID
+public abstract class AbstractEntityManagerFactoryBean implements
+                ^
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: D:\workspaces\git\spring-framework-3.2\spring-framework\spring-orm\src\main\java\org\springframework\orm\jpa\EntityManagerFactoryUtils.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+1 warning
+:spring-orm:processResources UP-TO-DATE
+:spring-orm:classes
+:spring-orm-hibernate4:compileJava
+:spring-orm-hibernate4:processResources UP-TO-DATE
+:spring-orm-hibernate4:classes
+:spring-orm:jar
+:spring-oxm:genCastor
+[ant:javac] : warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[ant:javac] warning: [options] bootstrap class path not set in conjunction with -source 1.6
+[ant:javac] Note: Some input files use unchecked or unsafe operations.
+[ant:javac] Note: Recompile with -Xlint:unchecked for details.
+[ant:javac] 1 warning
+:spring-oxm:genJaxb
+[ant:javac] : warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[ant:javac] warning: [options] bootstrap class path not set in conjunction with -source 1.6
+[ant:javac] 1 warning
+:spring-oxm:genXmlbeans
+[ant:xmlbeans] warning: [options] bootstrap class path not set in conjunction with -source 1.4
+[ant:xmlbeans] warning: [options] source value 1.4 is obsolete and will be removed in a future release
+[ant:xmlbeans] warning: [options] target value 1.4 is obsolete and will be removed in a future release
+[ant:xmlbeans] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+[ant:xmlbeans] 4 warnings
+:spring-oxm:compileTestJava
+Note: D:\workspaces\git\spring-framework-3.2\spring-framework\spring-oxm\src\test\java\org\springframework\oxm\jibx\Flights.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+:spring-oxm:processTestResources
+:spring-oxm:testClasses
+:spring-context-support:jar
+:spring-web:compileTestJava
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+:spring-web:processTestResources
+:spring-web:testClasses
+:spring-orm:compileTestJava
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.apache.openjpa.persistence.meta.AnnotationProcessor6' less than -source '1.7'
+warning: No processor claimed any of these annotations: org.springframework.beans.factory.annotation.Configurable,org.springframework.beans.factory.an
+notation.Autowired,org.springframework.test.annotation.ExpectedException,javax.persistence.Table,org.junit.After,org.springframework.stereotype.Reposi
+tory,javax.persistence.PersistenceUnit,org.junit.Before,javax.persistence.Id,org.springframework.test.annotation.NotTransactional,javax.persistence.Jo
+inColumn,org.springframework.test.annotation.Timed,org.junit.Test,javax.persistence.PersistenceContext,javax.persistence.OneToOne,javax.persistence.Ba
+sic,org.springframework.test.annotation.Repeat,javax.persistence.GeneratedValue,org.junit.Ignore,org.springframework.test.annotation.IfProfileValue,or
+g.springframework.transaction.annotation.Transactional
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+2 warnings
+:spring-orm:processTestResources
+:spring-orm:testClasses
+:spring-webmvc:compileJava
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+:spring-webmvc:processResources
+:spring-webmvc:classes
+:spring-webmvc-tiles3:compileJava
+:spring-webmvc-tiles3:processResources UP-TO-DATE
+:spring-webmvc-tiles3:classes
+:spring-webmvc:jar
+:spring-webmvc-portlet:compileJava
+:spring-webmvc-portlet:processResources
+:spring-webmvc-portlet:classes
+:spring-webmvc-portlet:jar
+:spring-test:compileJava
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+:spring-test:processResources UP-TO-DATE
+:spring-test:classes
+:spring-test:jar
+:spring-webmvc:compileTestJava
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+:spring-webmvc:processTestResources
+:spring-webmvc:testClasses
+:spring-webmvc-portlet:compileTestJava
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+:spring-webmvc-portlet:processTestResources
+:spring-webmvc-portlet:testClasses
+:spring-webmvc-tiles3:jar SKIPPED
+:spring-webmvc-tiles3:compileTestJava
+:spring-webmvc-tiles3:processTestResources
+:spring-webmvc-tiles3:testClasses
+:spring-test:compileTestJava
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+:spring-test:processTestResources
+:spring-test:testClasses
+:compileTestJava
+Note: D:\workspaces\git\spring-framework-3.2\spring-framework\src\test\java\org\springframework\context\annotation\ltw\ComponentScanningWithLTWTests.j
+ava uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+:compileTestGroovy UP-TO-DATE
+:processTestResources
+:testClasses
+:test
+:spring-aop:test
+:spring-aspects:compileJava
+:spring-aspects:processResources
+:spring-aspects:classes
+:spring-aspects:jar
+:spring-aspects:compileTestJava
+:spring-aspects:processTestResources
+:spring-aspects:testClasses
+:spring-aspects:test
+:spring-beans:test
+:spring-beans-groovy:compileTestJava UP-TO-DATE
+:spring-beans-groovy:compileTestGroovy UP-TO-DATE
+:spring-beans-groovy:processTestResources UP-TO-DATE
+:spring-beans-groovy:testClasses UP-TO-DATE
+:spring-beans-groovy:test
+:spring-build-src:compileJava UP-TO-DATE
+:spring-build-src:compileGroovy
+:spring-build-src:processResources
+:spring-build-src:classes
+:spring-build-src:compileTestJava UP-TO-DATE
+:spring-build-src:compileTestGroovy UP-TO-DATE
+:spring-build-src:processTestResources UP-TO-DATE
+:spring-build-src:testClasses UP-TO-DATE
+:spring-build-src:test
+:spring-context:test
+Unable to load JUnit4 runner to calculate Ignored test cases
+java.lang.reflect.InvocationTargetException
+        at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+        at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+        at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+        at java.lang.reflect.Constructor.newInstance(Constructor.java:414)
+        at org.gradle.api.internal.tasks.testing.junit.AllExceptIgnoredTestRunnerBuilder$FallbackJUnit4Builder.runnerForClass(AllExceptIgnoredTestRunnerBuilder.java:52)
+        at org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:59)
+        at org.junit.internal.builders.AllDefaultPossibilitiesBuilder.runnerForClass(AllDefaultPossibilitiesBuilder.java:26)
+        at org.gradle.api.internal.tasks.testing.junit.IgnoredTestDescriptorProvider.getAllDescriptions(IgnoredTestDescriptorProvider.java:31)
+        at org.gradle.api.internal.tasks.testing.junit.JUnitTestEventAdapter.processIgnoredClass(JUnitTestEventAdapter.java:104)
+        at org.gradle.api.internal.tasks.testing.junit.JUnitTestEventAdapter.testIgnored(JUnitTestEventAdapter.java:92)
+        at org.junit.runner.notification.RunNotifier$6.notifyListener(RunNotifier.java:175)
+        at org.junit.runner.notification.RunNotifier$SafeNotifier.run(RunNotifier.java:61)
+        at org.junit.runner.notification.RunNotifier.fireTestIgnored(RunNotifier.java:172)
+        at org.junit.internal.builders.IgnoredClassRunner.run(IgnoredClassRunner.java:16)
+        at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:80)
+        at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:47)
+        at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:69)
+        at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:49)
+        at sun.reflect.GeneratedMethodAccessor26.invoke(Unknown Source)
+        at sun.reflect.DelegatingMethodrImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:491)
+        at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+        at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+        at org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+        at org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+        at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+        at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:103)
+        at sun.reflect.GeneratedMethodAccessor25.invoke(Unknown Source)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:491)
+        at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+        at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+        at org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:355)
+        at org.gradle.internal.concurrent.DefaultExecutorFactory$StoppableExecutorImpl$1.run(DefaultExecutorFactory.java:66)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+        at java.lang.Thread.run(Thread.java:724)
+Caused by: org.junit.internal.runners.InitializationError
+        at org.junit.internal.runners.MethodValidator.assertValid(MethodValidator.java:57)
+        at org.junit.internal.runners.JUnit4ClassRunner.validate(JUnit4ClassRunner.java:47)
+        at org.junit.internal.runners.JUnit4ClassRunner.<init>(JUnit4ClassRunner.java:37)
+        ... 37 more
+:spring-context-support:test
+:spring-core:test
+:spring-expression:test
+:spring-instrument:test
+:spring-instrument-tomcat:compileJava
+:spring-instrument-tomcat:processResources UP-TO-DATE
+:spring-instrument-tomcat:classes
+:spring-instrument-tomcat:compileTestJava UP-TO-DATE
+:spring-instrument-tomcat:processTestResources
+:spring-instrument-tomcat:testClasses
+:spring-instrument-tomcat:test
+:spring-jdbc:test
+:spring-jms:compileJava
+Note: D:\workspaces\git\spring-framework-3.2\spring-framework\spring-jms\src\main\java\org\springframework\jms\listener\endpoint\StandardJmsActivation
+SpecFactory.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+:spring-jms:processResources
+:spring-jms:classes
+:spring-jms:compileTestJava
+Note: D:\workspaces\git\spring-framework-3.2\spring-framework\spring-jms\src\test\java\org\springframework\jms\support\converter\MappingJacksonMessage
+ConverterTests.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+:spring-jms:processTestResources
+:spring-jms:testClasses
+:spring-jms:test
+:spring-websocket:compileJava
+:spring-websocket:processResources UP-TO-DATE
+:spring-websocket:classes
+:spring-websocket:jar
+:spring-messaging:compileJava
+:spring-messaging:processResources UP-TO-DATE
+:spring-messaging:classes
+:spring-websocket:compileTestJava
+:spring-websocket:processTestResources
+:spring-websocket:testClasses
+:spring-messaging:compileTestJava
+Note: D:\workspaces\git\spring-framework-3.2\spring-framework\spring-messaging\src\test\java\org\springframework\messaging\simp\handler\UserDestinatio
+nMessageHandlerTests.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+:spring-messaging:processTestResources
+:spring-messaging:testClasses
+:spring-messaging:test
+:spring-orm:test
+:spring-orm-hibernate4:compileTestJava
+Note: D:\workspaces\git\spring-framework-3.2\spring-framework\spring-orm-hibernate4\src\test\java\org\springframework\orm\hibernate4\HibernateTransact
+ionManagerTests.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+:spring-orm-hibernate4:processTestResources UP-TO-DATE
+:spring-orm-hibernate4:testClasses
+:spring-orm-hibernate4:test
+:spring-oxm:test
+:spring-test:testNG
+:spring-test:test
+:spring-tx:test
+:spring-web:test
+:spring-webmvc:test
+:spring-webmvc-portlet:test
+:spring-webmvc-tiles3:test
+:spring-websocket:test
+:sonarRunner
+11:56:28.250 INFO  .s.b.b.BatchSettings - Load batch settings
+11:56:28.352 INFO     o.s.h.c.FileCache - User cache: C:\Users\giovanni.dalloglio\.sonar\cache
+11:56:28.361 INFO  atchPluginRepository - Install plugins
+11:56:32.789 INFO  .s.b.b.TaskContainer - -------------  Executing Project Scan
+11:56:36.239 INFO  b.b.JdbcDriverHolder - Install JDBC driver
+11:56:36.291 INFO  .b.ProjectExclusions - Apply project exclusions
+11:56:36.308 INFO      o.s.c.p.Database - Create JDBC datasource for jdbc:mysql://192.168.10.23:3306/sonar?useUnicode=true&characterEncoding=utf8&rewr
+iteBatchedStatements=true
+11:56:37.110 INFO  actDatabaseConnector - Initializing Hibernate
+11:56:47.673 INFO  .s.b.s.ScanContainer - -------------  Inspecting spring-aop
+11:56:47.683 INFO  .b.b.ProjectSettings - Load module settings
+11:56:50.186 INFO  .s.b.ProfileProvider - Quality profile : [name=Adv R&D way,language=java]
+11:56:50.215 INFO  s.f.ExclusionFilters - Excluded tests:
+11:56:50.218 INFO  s.f.ExclusionFilters -   **/package-info.java
+11:56:50.281 INFO  nPluginsConfigurator - Configure Maven plugins
+11:56:50.419 INFO        org.sonar.INFO - Compare to previous analysis
+11:56:50.467 INFO        org.sonar.INFO - Compare over 5 days (2013-11-15)
+11:56:50.491 INFO        org.sonar.INFO - Compare over 30 days (2013-10-21)
+11:56:50.782 INFO  s.f.FileSystemLogger - Base dir: D:\workspaces\git\spring-framework-3.2\spring-framework\spring-aop
+11:56:50.785 INFO  s.f.FileSystemLogger - Working dir: D:\workspaces\git\spring-framework-3.2\spring-framework\build\sonar\org.springframework_spring_
+spring-aop
+11:56:50.788 INFO  s.f.FileSystemLogger - Source dirs: D:\workspaces\git\spring-framework-3.2\spring-framework\spring-aop\src\main\resources, D:\works
+paces\git\spring-framework-3.2\spring-framework\spring-aop\src\main\java
+11:56:50.791 INFO  s.f.FileSystemLogger - Test dirs: D:\workspaces\git\spring-framework-3.2\spring-framework\spring-aop\src\test\resources, D:\workspa
+ces\git\spring-framework-3.2\spring-framework\spring-aop\src\test\java
+11:56:50.796 INFO  s.f.FileSystemLogger - Binary dirs: D:\workspaces\git\spring-framework-3.2\spring-framework\spring-aop\build\classes\main, D:\works
+paces\git\spring-framework-3.2\spring-framework\spring-aop\build\resources\main
+11:56:50.800 INFO  s.f.FileSystemLogger - Source encoding: windows-1252, default locale: it_IT
+11:56:51.214 INFO  p.PhasesTimeProfiler - Sensor JavaSourceImporter...
+11:56:57.741 INFO  p.PhasesTimeProfiler - Sensor JavaSourceImporter done: 6527 ms
+11:56:57.743 INFO  p.PhasesTimeProfiler - Sensor JavaSquidSensor...
+11:56:57.929 INFO    o.s.java.JavaSquid - Java AST scan...
+11:57:04.458 INFO    o.s.java.JavaSquid - Java AST scan done: 6529 ms
+11:57:04.499 INFO    o.s.java.JavaSquid - Java bytecode scan...
+:sonarRunner FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':sonarRunner'.
+> java.lang.ArrayIndexOutOfBoundsException: 29267
+
+* Try:
+Run with --info or --debug option to get more log output.
+
+* Exception is:
+org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':sonarRunner'.
+        at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeActions(ExecuteActionsTaskExecuter.java:69)
+        at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:46)
+        at org.gradle.api.internal.tasks.execution.PostExecutionAnalysisTaskExecuter.execute(PostExecutionAnalysisTaskExecuter.java:35)
+        at org.gradle.api.internal.changedetection.state.CacheLockReleasingTaskExecuter$1.run(CacheLockReleasingTaskExecuter.java:35)
+        at org.gradle.internal.Factories$1.create(Factories.java:22)
+        at org.gradle.cache.internal.DefaultCacheAccess.longRunningOperation(DefaultCacheAccess.java:179)
+        at org.gradle.cache.internal.DefaultCacheAccess.longRunningOperation(DefaultCacheAccess.java:232)
+        at org.gradle.cache.internal.DefaultPersistentDirectoryStore.longRunningOperation(DefaultPersistentDirectoryStore.java:142)
+        at org.gradle.api.internal.changedetection.state.DefaultTaskArtifactStateCacheAccess.longRunningOperation(DefaultTaskArtifactStateCacheAccess.java:83)
+        at org.gradle.api.internal.changedetection.state.CacheLockReleasingTaskExecuter.execute(CacheLockReleasingTaskExecuter.java:33)
+        at org.gradle.api.internal.tasks.execution.SkipUpToDateTaskExecuter.execute(SkipUpToDateTaskExecuter.java:58)
+        at org.gradle.api.internal.tasks.execution.ContextualisingTaskExecuter.execute(ContextualisingTaskExecuter.java:34)
+        at org.gradle.api.internal.changedetection.state.CacheLockAcquiringTaskExecuter$1.run(CacheLockAcquiringTaskExecuter.java:39)
+        at org.gradle.internal.Factories$1.create(Factories.java:22)
+        at org.gradle.cache.internal.DefaultCacheAccess.useCache(DefaultCacheAccess.java:124)
+        at org.gradle.cache.internal.DefaultCacheAccess.useCache(DefaultCacheAccess.java:112)
+        at org.gradle.cache.internal.DefaultPersistentDirectoryStore.useCache(DefaultPersistentDirectoryStore.java:134)
+        at org.gradle.api.internal.changedetection.state.DefaultTaskArtifactStateCacheAccess.useCache(DefaultTaskArtifactStateCacheAccess.java:79)
+        at org.gradle.api.internal.changedetection.state.CacheLockAcquiringTaskExecuter.execute(CacheLockAcquiringTaskExecuter.java:37)
+        at org.gradle.api.internal.tasks.execution.ValidatingTaskExecuter.execute(ValidatingTaskExecuter.java:57)
+        at org.gradle.api.internal.tasks.execution.SkipEmptySourceFilesTaskExecuter.execute(SkipEmptySourceFilesTaskExecuter.java:41)
+        at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:51)
+        at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:52)
+        at org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter.execute(ExecuteAtMostOnceTaskExecuter.java:42)
+        at org.gradle.api.internal.AbstractTask.executeWithoutThrowingTaskFailure(AbstractTask.java:282)
+        at org.gradle.execution.taskgraph.DefaultTaskPlanExecutor.executeTask(DefaultTaskPlanExecutor.java:48)
+        at org.gradle.execution.taskgraph.DefaultTaskPlanExecutor.processTask(DefaultTaskPlanExecutor.java:34)
+        at org.gradle.execution.taskgraph.DefaultTaskPlanExecutor.process(DefaultTaskPlanExecutor.java:27)
+        at org.gradle.execution.taskgraph.DefaultTaskGraphExecuter.execute(DefaultTaskGraphExecuter.java:89)
+        at org.gradle.execution.SelectedTaskExecutionAction.execute(SelectedTaskExecutionAction.java:29)
+        at org.gradle.execution.DefaultBuildExecuter.execute(DefaultBuildExecuter.java:61)
+        at org.gradle.execution.DefaultBuildExecuter.access$200(DefaultBuildExecuter.java:23)
+        at org.gradle.execution.DefaultBuildExecuter$2.proceed(DefaultBuildExecuter.java:67)
+        at org.gradle.api.internal.changedetection.state.TaskCacheLockHandlingBuildExecuter$1.run(TaskCacheLockHandlingBuildExecuter.java:31)
+        at org.gradle.internal.Factories$1.create(Factories.java:22)
+        at org.gradle.cache.internal.DefaultCacheAccess.useCache(DefaultCacheAccess.java:124)
+        at org.gradle.cache.internal.DefaultCacheAccess.useCache(DefaultCacheAccess.java:112)
+        at org.gradle.cache.internal.DefaultPersistentDirectoryStore.useCache(DefaultPersistentDirectoryStore.java:134)
+        at org.gradle.api.internal.changedetection.state.DefaultTaskArtifactStateCacheAccess.useCache(DefaultTaskArtifactStateCacheAccess.java:79)
+        at org.gradle.api.internal.changedetection.state.TaskCacheLockHandlingBuildExecuter.execute(TaskCacheLockHandlingBuildExecuter.java:29)
+        at org.gradle.execution.DefaultBuildExecuter.execute(DefaultBuildExecuter.java:61)
+        at org.gradle.execution.DefaultBuildExecuter.access$200(DefaultBuildExecuter.java:23)
+        at org.gradle.execution.DefaultBuildExecuter$2.proceed(DefaultBuildExecuter.java:67)
+        at org.gradle.execution.DryRunBuildExecutionAction.execute(DryRunBuildExecutionAction.java:32)
+        at org.gradle.execution.DefaultBuildExecuter.execute(DefaultBuildExecuter.java:61)
+        at org.gradle.execution.DefaultBuildExecuter.execute(DefaultBuildExecuter.java:54)
+        at org.gradle.initialization.DefaultGradleLauncher.doBuildStages(DefaultGradleLauncher.java:166)
+        at org.gradle.initialization.DefaultGradleLauncher.doBuild(DefaultGradleLauncher.java:113)
+        at org.gradle.initialization.DefaultGradleLauncher.run(DefaultGradleLauncher.java:81)
+        at org.gradle.launcher.exec.InProcessBuildActionExecuter$DefaultBuildController.run(InProcessBuildActionExecuter.java:64)
+        at org.gradle.launcher.cli.ExecuteBuildAction.run(ExecuteBuildAction.java:33)
+        at org.gradle.launcher.cli.ExecuteBuildAction.run(ExecuteBuildAction.java:24)
+        at org.gradle.launcher.exec.InProcessBuildActionExecuter.execute(InProcessBuildActionExecuter.java:35)
+        at org.gradle.launcher.exec.InProcessBuildActionExecuter.execute(InProcessBuildActionExecuter.java:26)
+        at org.gradle.launcher.cli.RunBuildAction.run(RunBuildAction.java:50)
+        at org.gradle.api.internal.Actions$RunnableActionAdapter.execute(Actions.java:171)
+        at org.gradle.launcher.cli.CommandLineActionFactory$ParseAndBuildAction.execute(CommandLineActionFactory.java:201)
+        at org.gradle.launcher.cli.CommandLineActionFactory$ParseAndBuildAction.execute(CommandLineActionFactory.java:174)
+        at org.gradle.launcher.cli.CommandLineActionFactory$WithLogging.execute(CommandLineActionFactory.java:170)
+        at org.gradle.launcher.cli.CommandLineActionFactory$WithLogging.execute(CommandLineActionFactory.java:139)
+        at org.gradle.launcher.cli.ExceptionReportingAction.execute(ExceptionReportingAction.java:33)
+        at org.gradle.launcher.cli.ExceptionReportingAction.execute(ExceptionReportingAction.java:22)
+        at org.gradle.launcher.Main.doAction(Main.java:48)
+        at org.gradle.launcher.bootstrap.EntryPoint.run(EntryPoint.java:45)
+        at org.gradle.launcher.Main.main(Main.java:39)
+        at org.gradle.launcher.bootstrap.ProcessBootstrap.runNoExit(ProcessBootstrap.java:50)
+        at org.gradle.launcher.bootstrap.ProcessBootstrap.run(ProcessBootstrap.java:32)
+        at org.gradle.launcher.GradleMain.main(GradleMain.java:26)
+        at org.gradle.wrapper.BootstrapMainStarter.start(BootstrapMainStarter.java:33)
+        at org.gradle.wrapper.WrapperExecutor.execute(WrapperExecutor.java:130)
+        at org.gradle.wrapper.GradleWrapperMain.main(GradleWrapperMain.java:48)
+Caused by: org.sonar.runner.RunnerException: java.lang.ArrayIndexOutOfBoundsException: 29267
+        at org.sonar.runner.Runner.delegateExecution(Runner.java:288)
+        at org.sonar.runner.Runner.execute(Runner.java:151)
+        at org.sonar.runner.Runner$execute.call(Unknown Source)
+        at org.gradle.api.sonar.runner.SonarRunner.run(SonarRunner.groovy:52)
+        at org.gradle.api.internal.BeanDynamicObject$MetaClassAdapter.invokeMethod(BeanDynamicObject.java:216)
+        at org.gradle.api.internal.BeanDynamicObject.invokeMethod(BeanDynamicObject.java:122)
+        at org.gradle.api.internal.CompositeDynamicObject.invokeMethod(CompositeDynamicObject.java:147)
+        at org.gradle.api.sonar.runner.SonarRunner_Decorated.invokeMethod(Unknown Source)
+        at org.gradle.util.ReflectionUtil.invoke(ReflectionUtil.groovy:23)
+        at org.gradle.api.internal.project.taskfactory.AnnotationProcessingTaskFactory$StandardTaskAction.doExecute(AnnotationProcessingTaskFactory.java:217)
+        at org.gradle.api.internal.project.taskfactory.AnnotationProcessingTaskFactory$StandardTaskAction.execute(AnnotationProcessingTaskFactory.java:210)
+        at org.gradle.api.internal.project.taskfactory.AnnotationProcessingTaskFactory$StandardTaskAction.execute(AnnotationProcessingTaskFactory.java:199)
+        at org.gradle.api.internal.AbstractTask$TaskActionWrapper.execute(AbstractTask.java:526)
+        at org.gradle.api.internal.AbstractTask$TaskActionWrapper.execute(AbstractTask.java:509)
+        at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeAction(ExecuteActionsTaskExecuter.java:80)
+        at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeActions(ExecuteActionsTaskExecuter.java:61)
+        ... 70 more
+Caused by: java.lang.ArrayIndexOutOfBoundsException: 29267
+        at org.objectweb.asm.ClassReader.readClass(Unknown Source)
+        at org.objectweb.asm.ClassReader.accept(Unknown Source)
+        at org.objectweb.asm.ClassReader.accept(Unknown Source)
+        at org.sonar.java.bytecode.asm.AsmClassProviderImpl.decoracteAsmClassFromBytecode(AsmClassProviderImpl.java:74)
+        at org.sonar.java.bytecode.asm.AsmClassProviderImpl.getClass(AsmClassProviderImpl.java:54)
+        at org.sonar.java.bytecode.asm.AsmClassVisitor.visit(AsmClassVisitor.java:52)
+        at org.objectweb.asm.ClassReader.accept(Unknown Source)
+        at org.objectweb.asm.ClassReader.accept(Unknown Source)
+        at org.sonar.java.bytecode.asm.AsmClassProviderImpl.decoracteAsmClassFromBytecode(AsmClassProviderImpl.java:74)
+        at org.sonar.java.bytecode.asm.AsmClassProviderImpl.getClass(AsmClassProviderImpl.java:54)
+        at org.sonar.java.bytecode.asm.AsmMethodVisitor.visitMethodInsn(AsmMethodVisitor.java:53)
+        at org.objectweb.asm.ClassReader.accept(Unknown Source)
+        at org.objectweb.asm.ClassReader.accept(Unknown Source)
+        at org.sonar.java.bytecode.asm.AsmClassProviderImpl.decoracteAsmClassFromBytecode(AsmClassProviderImpl.java:74)
+        at org.sonar.java.bytecode.asm.AsmClassProviderImpl.getClass(AsmClassProviderImpl.java:54)
+        at org.sonar.java.bytecode.BytecodeScanner.loadByteCodeInformation(BytecodeScanner.java:87)
+        at org.sonar.java.bytecode.BytecodeScanner.scan(BytecodeScanner.java:60)
+        at org.sonar.java.bytecode.BytecodeScanner.scan(BytecodeScanner.java:49)
+        at org.sonar.java.JavaSquid.scanBytecode(JavaSquid.java:106)
+        at org.sonar.java.JavaSquid.scan(JavaSquid.java:94)
+        at org.sonar.plugins.java.JavaSquidSensor.analyse(JavaSquidSensor.java:74)
+        at org.sonar.batch.phases.SensorsExecutor.execute(SensorsExecutor.java:70)
+        at org.sonar.batch.phases.Phases.execute(Phases.java:101)
+        at org.sonar.batch.scan.ScanContainer.doStart(ScanContainer.java:147)
+        at org.sonar.batch.bootstrap.Container.start(Container.java:72)
+        at org.sonar.batch.scan.ScanTask.scan(ScanTask.java:65)
+        at org.sonar.batch.scan.ScanTask.scanRecursively(ScanTask.java:56)
+        at org.sonar.batch.scan.ScanTask.scanRecursively(ScanTask.java:54)
+        at org.sonar.batch.scan.ScanTask.execute(ScanTask.java:49)
+        at org.sonar.batch.bootstrap.TaskContainer.doStart(TaskContainer.java:188)
+        at org.sonar.batch.bootstrap.Container.start(Container.java:72)
+        at org.sonar.batch.bootstrap.TaskBootstrapContainer.executeTask(TaskBootstrapContainer.java:73)
+        at org.sonar.batch.bootstrap.TaskBootstrapContainer.doStart(TaskBootstrapContainer.java:62)
+        at org.sonar.batch.bootstrap.Container.start(Container.java:72)
+        at org.sonar.batch.bootstrap.BootstrapContainer.doStart(BootstrapContainer.java:104)
+        at org.sonar.batch.bootstrap.Container.start(Container.java:72)
+        at org.sonar.batch.Batch.execute(Batch.java:106)
+        at org.sonar.runner.internal.batch.Launcher.executeBatch(Launcher.java:69)
+        at org.sonar.runner.internal.batch.Launcher.execute(Launcher.java:61)
+        at org.sonar.runner.Runner.delegateExecution(Runner.java:285)
+        ... 85 more
+
+
+BUILD FAILED
+
+Total time: 13 mins 52.572 secs
+
+D:\workspaces\git\spring-framework-3.2\spring-framework>
